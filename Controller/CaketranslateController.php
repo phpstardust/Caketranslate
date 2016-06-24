@@ -23,7 +23,7 @@ class CaketranslateController extends AppController {
 			$this->Session->write('Config.language', $language);
 			CakeSession::write('Config.language', $language);
 			
-			$this->redirect($this->referer());
+			$this->redirect('http://your_site/' .$language);
 		
 		}
 		
