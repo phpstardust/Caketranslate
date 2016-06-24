@@ -13,6 +13,11 @@ class CaketranslateHelper extends AppHelper {
 	
 	public function translate($text = NULL) {
 		
+		if (!$this->Session->check('Config.language')) {
+			Configure::write('Config.language', 'it');
+			CakeSession::write('Config.language', 'it');	
+		}
+		
 		$strings = array(
 			'it' => array(
 				'Chi siamo' => 'Chi siamo'
